@@ -80,16 +80,19 @@
         <div class="resizer"></div>
 
         <div class="main">
+
             <!--Header-->
             <div class="main-header">
-                <button class="arrow-buttons"></button>
-                <button class="arrow-buttons"></button>
+                <div class="arrow-buttons-container">
+                    <button class="arrow-buttons" id="left-arrow"><img src="/assets/backward_icon.png" alt="back arrow" style="height: 21px; width: 21px; margin-left: -3px; margin-top: 3px;"></button>
+                    <button class="arrow-buttons" id="right-arrow"><img src="/assets/forward_icon.png" id="right-arrow" alt="forwards arrow" style="height: 20px; width: 20px; margin-left: 2px; margin-top: 3px;"></button>
+                </div>
+                <div style="width: 75%;"></div>
+                <a href="#" id="install-app"><i class="fa-light fa-circle-down"></i><span>Install App</span></a>
+                <a href="#" id="profile"><img src="https://i.scdn.co/image/ab67757000003b82494a2dd6195871609048c991" alt="profile picture"></a>
             </div>
         </div>
     </div>
-
-
-
 
 
     <div class="music-player">
@@ -99,7 +102,7 @@
                 <span class="song-name"><a href="https://open.spotify.com/album/13ATYLc7i4HuNbQrAEawOH">Yellow Paper Daisy</a></span>
                 <span class="song-album"><a href="https://open.spotify.com/artist/04hYGGSjYtLekuuJXEGrIl">When Chai Met Toast</a></span>
             </div>
-            <div class="heart"><span class="material-symbols-outlined">favorite</span></div>
+            <div class="heart"><input type="checkbox"><span class="material-symbols-outlined">favorite</span></button></div>
         </div>
         <div class="player">
             <div class="controls">
