@@ -193,7 +193,6 @@ a {
     margin-right: 8px;
     margin-bottom: 0px;
     border-radius: 9px;
-    overflow: auto;
     gap: 20px;
 }
 
@@ -201,7 +200,8 @@ a {
     height: 100%;
     display: flex;
     flex-direction: column;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
     gap: 20px;
     padding-top: 20px;
 }
@@ -211,7 +211,7 @@ a {
 }
 
 .main-header {
-    height: 64px;
+    height: 32px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -260,6 +260,11 @@ a {
     align-items: center;
     justify-content: center;
     gap: 6px;
+    transition: 0.2s;
+}
+
+#install-app:hover {
+    transform: scale(1.05);
 }
 
 #install-app span {
@@ -460,6 +465,76 @@ a {
 .volume-bar {
     width: 100px;
 }
+
+
+
+/* Liked Main */
+.liked-songs-header {
+    display: flex;
+    height: 250px;
+    flex-direction: row;
+    padding: 0px 24px 24px 24px;
+    align-items: end;
+    gap: 20px;
+    /* background-image: linear-gradient(-45deg,#533ba0,#55399f); */
+}
+
+.liked-songs-header img {
+    height: 230px;
+    width: 230px;
+    filter: brightness(1.2);
+    box-shadow: 5px 5px 100px black;
+}
+
+.liked-songs-info {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 10px;
+}
+
+.liked-songs-subinfo {
+    display: flex;
+    height: 25px;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.liked-songs-subinfo img {
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+}
+
+.liked-songs-subinfo a:hover {
+    text-decoration: underline;
+}
+
+.songs-content {
+    height: 36px;
+    padding: 0px 24px;
+}
+
+.songs-heading {
+    display: flex;
+    flex-direction: row;
+    padding: 0px 16px;
+    gap: 16px;
+    justify-content: space-between;
+}
+
+.songs-list {
+    align-items: center;
+    height: 56px;
+    border-radius: 10px;
+}
+
+.songs-list:hover {
+    background-color: rgb(39, 39, 39);
+}
+
+
 
 
 /* Scrollbar */

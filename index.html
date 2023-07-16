@@ -21,8 +21,8 @@
 
             <!--Home/Search bar-->
             <ul class="top-bar">
-                <li class="top-bar-elements" id="Home"><a href="#" style="width: 100%; height: 40px; display: flex; align-items: center; gap: 20px; font-weight: 500; font-size: 1rem;"><span class="material-symbols-outlined" style="height: 24px; font-variation-settings:'FILL' 100,'wght' 400,'GRAD' 0,'opsz' 48">home</span><div>Home</div></a></li>
-                <li class="top-bar-elements" id="search"><a href="#" style="width: 100%; height: 40px; display: flex; align-items: center; gap: 20px; font-weight: 500; font-size: 1rem; color: #9c9c9c;"><span class="material-symbols-outlined" style="height: 24px;">search</span><div style="width: 100%;">Search</div></a></li>
+                <li class="top-bar-elements" id="Home"><a href="/" style="width: 100%; height: 40px; display: flex; align-items: center; gap: 20px; font-weight: 500; font-size: 1rem;"><span class="material-symbols-outlined" style="height: 24px; font-variation-settings:'FILL' 100,'wght' 400,'GRAD' 0,'opsz' 48">home</span><div>Home</div></a></li>
+                <li class="top-bar-elements" id="search"><a href="/search" style="width: 100%; height: 40px; display: flex; align-items: center; gap: 20px; font-weight: 500; font-size: 1rem; color: #9c9c9c;"><span class="material-symbols-outlined" style="height: 24px;">search</span><div style="width: 100%;">Search</div></a></li>
             </ul>
 
 
@@ -55,7 +55,7 @@
                     </div>
                     <ul class="albums">
                         <li>
-                            <a href="#" style="color: #1ed760;">
+                            <a href="/liked_songs" style="color: #1ed760;">
                                 <img src="https://i1.sndcdn.com/artworks-y6qitUuZoS6y8LQo-5s2pPA-t500x500.jpg" alt="liked songs" style="height: 48px; filter: brightness(1.4);">
                                 <div class="album-content">    
                                     <p>Liked Songs</p>
@@ -81,43 +81,42 @@
 
         <div class="main">
             <div class="main-container">
-                <!--Header-->
-            <div class="main-header">
-                <div class="arrow-buttons-container">
-                    <button class="arrow-buttons" id="left-arrow"><img src="/assets/backward_icon.png" alt="back arrow" style="height: 21px; width: 21px; margin-left: -3px; margin-top: 3px;"></button>
-                    <button class="arrow-buttons" id="right-arrow"><img src="/assets/forward_icon.png" id="right-arrow" alt="forwards arrow" style="height: 20px; width: 20px; margin-left: 2px; margin-top: 3px;"></button>
+                    <!--Header-->
+                <div class="main-header">
+                    <div class="arrow-buttons-container">
+                        <button class="arrow-buttons" id="left-arrow"><img src="/assets/backward_icon.png" alt="back arrow" style="height: 21px; width: 21px; margin-left: -3px; margin-top: 3px;"></button>
+                        <button class="arrow-buttons" id="right-arrow"><img src="/assets/forward_icon.png" id="right-arrow" alt="forwards arrow" style="height: 20px; width: 20px; margin-left: 2px; margin-top: 3px;"></button>
+                    </div>
+                    <div style="width: 75%;"></div>
+                    <a href="#" id="install-app"><span class="material-symbols-outlined" style="height: 24px; font-size: 24px; display: inline-block;">download_for_offline</span><span>Install App</span></a>
+                    <a href="#" id="profile"><img src="https://i.scdn.co/image/ab67757000003b82494a2dd6195871609048c991" alt="profile picture"></a>
                 </div>
-                <div style="width: 75%;"></div>
-                <a href="#" id="install-app"><span class="material-symbols-outlined" style="height: 24px; font-size: 24px; display: inline-block;">download_for_offline</span><span>Install App</span></a>
-                <a href="#" id="profile"><img src="https://i.scdn.co/image/ab67757000003b82494a2dd6195871609048c991" alt="profile picture"></a>
+                <div style="font-size: 28px; font-weight: 700; padding-left: 22px;">Recently Played</div>
+                <div class="cards-container">
+                    <a href="/liked_songs" class="main-content-cards">
+                        <img src="https://i1.sndcdn.com/artworks-y6qitUuZoS6y8LQo-5s2pPA-t500x500.jpg" style="height: 180px; width: 180px; filter: brightness(1.3); border-radius: 6px; margin: 20px;" alt="liked songs">
+                        <p>Liked Songs</p>
+                    </a>
+                </div>
+                <div style="font-size: 28px; font-weight: 700; padding-left: 22px; padding-top: 25px;">Trending now near you</div>
+                <div class="cards-container">
+                    <a href="https://open.spotify.com/album/13ATYLc7i4HuNbQrAEawOH" class="main-content-cards">
+                        <img src="https://song.link/_next/image?url=https%3A%2F%2Fis2-ssl.mzstatic.com%2Fimage%2Fthumb%2FMusic125%2Fv4%2F7e%2Fdc%2F12%2F7edc1207-0529-68da-2813-06b247c68120%2Fcover.jpg%2F512x512bb.jpg&w=1920&q=75" style="height: 180px; width: 180px; filter: brightness(1.3); border-radius: 6px; margin: 20px;" alt="liked songs">
+                        <p>Yellow Paper Daisy</p>
+                        <p style="font-size: 0.7rem; font-weight: 500;">When Chai Met Toast</p>
+                    </a>
+                    <a href="https://open.spotify.com/track/0NLkVxf0PyxsXBG3EuZcJf?si=1ba6b5c954fe457c" class="main-content-cards">
+                        <img src="https://song.link/_next/image?url=https%3A%2F%2Fis2-ssl.mzstatic.com%2Fimage%2Fthumb%2FMusic125%2Fv4%2F71%2F25%2F66%2F712566f2-3258-8ecd-bca9-a710273b0dbb%2F859748896266_cover.jpg%2F512x512bb.jpg&w=1920&q=75" style="height: 180px; width: 180px; filter: brightness(1.3); border-radius: 6px; margin: 20px;" alt="liked songs">
+                        <p>Gul</p>
+                        <p style="font-size: 0.7rem; font-weight: 500;">Anuv Jain</p>
+                    </a>
+                    <a href="https://open.spotify.com/track/1Olj3YZ6vej9q2qi16j04R?si=8b1fa0112758429c" class="main-content-cards">
+                        <img src="https://song.link/_next/image?url=https%3A%2F%2Fis3-ssl.mzstatic.com%2Fimage%2Fthumb%2FMusic122%2Fv4%2Fbf%2F23%2F30%2Fbf2330e0-93f2-0e94-f3c1-425e0cdaa8b6%2F197187595013.jpg%2F512x512bb.jpg&w=1920&q=75" style="height: 180px; width: 180px; filter: brightness(1.3); border-radius: 6px; margin: 20px;" alt="liked songs">
+                        <p>to my future wife.</p>
+                        <p style="font-size: 0.7rem; font-weight: 500;">normal the kid</p>
+                    </a>
+                </div>
             </div>
-            <div style="font-size: 28px; font-weight: 700; padding-left: 22px;">Recently Played</div>
-            <div class="cards-container">
-                <a href="#" class="main-content-cards">
-                    <img src="https://i1.sndcdn.com/artworks-y6qitUuZoS6y8LQo-5s2pPA-t500x500.jpg" style="height: 180px; width: 180px; filter: brightness(1.3); border-radius: 6px; margin: 20px;" alt="liked songs">
-                    <p>Liked Songs</p>
-                </a>
-            </div>
-            <div style="font-size: 28px; font-weight: 700; padding-left: 22px; padding-top: 25px;">Trending now near you</div>
-            <div class="cards-container">
-                <a href="#" class="main-content-cards">
-                    <img src="https://song.link/_next/image?url=https%3A%2F%2Fis2-ssl.mzstatic.com%2Fimage%2Fthumb%2FMusic125%2Fv4%2F7e%2Fdc%2F12%2F7edc1207-0529-68da-2813-06b247c68120%2Fcover.jpg%2F512x512bb.jpg&w=1920&q=75" style="height: 180px; width: 180px; filter: brightness(1.3); border-radius: 6px; margin: 20px;" alt="liked songs">
-                    <p>Yellow Paper Daisy</p>
-                    <p style="font-size: 0.7rem; font-weight: 500;">When Chai Met Toast</p>
-                </a>
-                <a href="#" class="main-content-cards">
-                    <img src="https://song.link/_next/image?url=https%3A%2F%2Fis2-ssl.mzstatic.com%2Fimage%2Fthumb%2FMusic125%2Fv4%2F71%2F25%2F66%2F712566f2-3258-8ecd-bca9-a710273b0dbb%2F859748896266_cover.jpg%2F512x512bb.jpg&w=1920&q=75" style="height: 180px; width: 180px; filter: brightness(1.3); border-radius: 6px; margin: 20px;" alt="liked songs">
-                    <p>Gul</p>
-                    <p style="font-size: 0.7rem; font-weight: 500;">Anuv Jain</p>
-                </a>
-                <a href="#" class="main-content-cards">
-                    <img src="https://song.link/_next/image?url=https%3A%2F%2Fis3-ssl.mzstatic.com%2Fimage%2Fthumb%2FMusic122%2Fv4%2Fbf%2F23%2F30%2Fbf2330e0-93f2-0e94-f3c1-425e0cdaa8b6%2F197187595013.jpg%2F512x512bb.jpg&w=1920&q=75" style="height: 180px; width: 180px; filter: brightness(1.3); border-radius: 6px; margin: 20px;" alt="liked songs">
-                    <p>to my future wife.</p>
-                    <p style="font-size: 0.7rem; font-weight: 500;">normal the kid</p>
-                </a>
-            </div>
-            </div>
-            
         </div>
     </div>
 
