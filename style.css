@@ -230,12 +230,13 @@ a {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
 }
 
 #install-app span {
     display: inline-block;
     font-size: 0.8rem;
-    width: 100%;
+    /* width: 100%; */
     text-align: center;
 }
 
