@@ -101,6 +101,51 @@ a {
     height: 32px;
 }
 
+.library-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    height: 100%;
+}
+
+.search-recents {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 6px 14px;
+}
+
+.search-recents button {
+    background-color: transparent;
+    color: white;
+    border: #121212;
+}
+
+.albums {
+    list-style: none;
+    padding: 0;
+    margin: 0px 8px;
+}
+
+.albums li {
+    background-color: #232323;
+    height: 64px;
+    border-radius: 8px;
+}
+
+.albums li a {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    border-radius: 8px;
+    align-items: center;
+}
+
+.albums li a img {
+    margin: 8px;
+    border-radius: 4px;
+}
+
 
 .resizer {
     height: 100%;
