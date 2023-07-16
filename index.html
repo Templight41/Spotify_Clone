@@ -12,7 +12,8 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,100,0,200" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" /> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
     <div class="contain">
@@ -20,8 +21,8 @@
 
             <!--Home/Search bar-->
             <ul class="top-bar">
-                <li class="top-bar-elements" id="Home"><a href="#" style="width: 100%; height: 40px; display: flex; align-items: center; gap: 20px; font-weight: 500; font-size: 1rem;"><span class="material-symbols-outlined" style="height: 24px;">home</span>Home</a></li>
-                <li class="top-bar-elements"><a href="#" style="width: 100%; height: 40px; display: flex; align-items: center; gap: 20px; font-weight: 500; font-size: 1rem;"><span class="material-symbols-outlined" style="height: 24px;">search</span>Search</a></li>
+                <li class="top-bar-elements" id="Home"><a href="#" style="width: 100%; height: 40px; display: flex; align-items: center; gap: 20px; font-weight: 500; font-size: 1rem;"><span class="material-symbols-outlined" style="height: 24px; font-variation-settings:'FILL' 100,'wght' 400,'GRAD' 0,'opsz' 48">home</span>Home</a></li>
+                <li class="top-bar-elements"><a href="#" style="width: 100%; height: 40px; display: flex; align-items: center; gap: 20px; font-weight: 500; font-size: 1rem; opacity: 0.6;"><span class="material-symbols-outlined" style="height: 24px;">search</span>Search</a></li>
             </ul>
 
 
@@ -54,22 +55,37 @@
                     </div>
                     <ul class="albums">
                         <li>
-                            <a href="#">
+                            <a href="#" style="color: #1ed760;">
                                 <img src="https://i1.sndcdn.com/artworks-y6qitUuZoS6y8LQo-5s2pPA-t500x500.jpg" alt="liked songs" style="height: 48px; filter: brightness(1.4);">
-                                Liked Songs
+                                <div class="album-content">    
+                                    <p>Liked Songs</p>
+                                    <p style="font-size: 12px; color: rgb(176, 176, 176); "><i class="fa-solid fa-thumbtack" style="color: #1ed760; transform: rotate(45deg);"></i> &nbsp; Playlist  •  1 song</p>
+                                </div>
                             </a>
                         </li>
-                        <!-- <li><a href="#">Liked Songs</a></li> -->
+                        <!-- <li>
+                            <a href="#" style="color: #1ed760;">
+                                <img src="https://i1.sndcdn.com/artworks-y6qitUuZoS6y8LQo-5s2pPA-t500x500.jpg" alt="liked songs" style="height: 48px; filter: brightness(1.4);">
+                                <div class="album-content">    
+                                    <p>Liked Songs</p>
+                                    <p style="font-size: 12px; color: rgb(176, 176, 176); "><i class="fa-solid fa-thumbtack" style="color: #1ed760; transform: rotate(45deg);"></i> &nbsp; Playlist  •  1 song</p>
+                                </div>
+                            </a>
+                        </li> -->
                     </ul>
                 </div>
             </div>
         </div>
 
-
-
-
         <div class="resizer"></div>
-        <div class="main"></div>
+
+        <div class="main">
+            <!--Header-->
+            <div class="main-header">
+                <button class="arrow-buttons"></button>
+                <button class="arrow-buttons"></button>
+            </div>
+        </div>
     </div>
 
 
