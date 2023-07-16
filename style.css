@@ -4,12 +4,13 @@ body {
     background-color: black;
     color: white;
     overflow: hidden;
-    box-sizing: border-box;
-    overflow: hidden;
+    /* box-sizing: border-box; */
+    /* overflow:visible; */
     height: 100vh;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    flex-wrap: nowrap;
 }
 
 a {
@@ -24,6 +25,9 @@ a {
     overflow: hidden;
     display: flex;
 }
+
+
+/* Sidebar */
 
 .sidebar {
     height: 99%;
@@ -54,6 +58,12 @@ a {
     padding: 4px 12px;
     background-color: transparent;
 }
+
+.top-bar-elements a:hover span, .top-bar-elements a:hover div{
+    color: white;
+    /* background-color: white; */
+}
+
 
 #home {
     display: flex;
@@ -99,6 +109,10 @@ a {
     border-radius: 15px;
     padding: 6px 14px;
     height: 32px;
+}
+
+.song-type-elements span:hover {
+    background-color: #313131;
 }
 
 .library-content {
@@ -165,6 +179,9 @@ a {
     background-color: black;
 }
 
+
+/* Main */
+
 .main {
     margin-top: 8px;
     min-width: 520px;
@@ -176,6 +193,17 @@ a {
     margin-right: 8px;
     margin-bottom: 0px;
     border-radius: 9px;
+    overflow: auto;
+    gap: 20px;
+}
+
+.main-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    gap: 20px;
+    padding-top: 20px;
 }
 
 .main-header-container {
@@ -231,12 +259,12 @@ a {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    gap: 6px;
 }
 
 #install-app span {
     display: inline-block;
     font-size: 0.8rem;
-    /* width: 100%; */
     text-align: center;
 }
 
@@ -253,9 +281,38 @@ a {
     height: 24px;
     margin: 0;
     width: 24px;
-    /* border: 4px solid black; */
 }
 
+.cards-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-left: 40px;
+    gap: 50px;
+    margin-top: 15px;
+}
+
+.main-content-cards {
+    display: flex;
+    flex-direction: column;
+    background-color: #171717;
+    width: 225px;
+    height: 325px;
+    border: 1px solid #212121;
+    box-shadow: 5px 5px 40px black;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.main-content-cards p {
+    margin: 0;
+    margin-top: 15px;
+    width: 80%;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+}
 
 
 /* Music Player */
@@ -269,6 +326,7 @@ a {
     align-items: center;
     padding-left: 14px;
     justify-content: space-between;
+    background-color: black;
 }
 
 .song-info-container {
@@ -327,14 +385,14 @@ a {
     align-self: center;
 }
 
-.material-symbols-outlined:hover {
+/* .material-symbols-outlined:hover {
   font-variation-settings:
   'FILL' 1,
   'wght' 400,
   'GRAD' 0,
   'opsz' 48;
   color: #1ed760;
-}
+} */
 
 .heart span {
     font-size: 20px;
@@ -401,4 +459,25 @@ a {
 
 .volume-bar {
     width: 100px;
+}
+
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+    width: 10px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #414141;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #313131;
 }
