@@ -4,8 +4,7 @@ body {
     background-color: black;
     color: white;
     overflow: hidden;
-    /* box-sizing: border-box; */
-    /* overflow:visible; */
+    overflow-x: auto;
     height: 100vh;
     display: flex;
     flex-wrap: wrap;
@@ -288,6 +287,10 @@ a {
     width: 24px;
 }
 
+#profile:hover {
+    transform: scale(1.05);
+}
+
 .cards-container {
     display: flex;
     flex-direction: row;
@@ -304,9 +307,15 @@ a {
     width: 225px;
     height: 325px;
     border: 1px solid #212121;
-    box-shadow: 5px 5px 40px black;
+    box-shadow: 5px 5px 35px black;
     align-items: center;
     border-radius: 8px;
+    transition: 0.3s;
+}
+
+.main-content-cards:hover {
+    transform: scale(1.02);
+    box-shadow: 5px 5px 40px black;
 }
 
 .main-content-cards p {
@@ -378,7 +387,7 @@ a {
     color: white;
 }
 
-.song-album {
+.song-artist {
     height: 15px;
     font-size: 11px;
     margin-top: -11px;
@@ -408,15 +417,17 @@ a {
 .player {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     height: 64px;
     width: 50%;
-    justify-content: center;
+    align-content: center;
     max-width: 700px;
+    /* gap: 5px; */
 }
 
 .controls {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     width: 24*0px;
     gap: 15px;
@@ -431,6 +442,14 @@ a {
     width: 38px;
 }
 
+.controls button i {
+    color: grey;
+}
+
+.controls button:hover i{
+    color: white;
+}
+
 #playPauseBtn {
     height: 32px;
     width: 32px;
@@ -441,12 +460,124 @@ a {
     text-align: center;
 }
 
-.progress-bar {
-    height: 28px;
+#playPauseBtn:hover {
+    transform: scale(1.04);
+}
+
+#play {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    border: 1px solid white;
+    background-color: white;
+    font-size: 17px;
+    text-align: center;
+}
+
+#play:hover {
+    transform: scale(1.04);
+}
+
+#pause {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    border: 1px solid white;
+    background-color: white;
+    font-size: 17px;
+    text-align: center;
+}
+
+#pause:hover {
+    transform: scale(1.04);
+}
+
+.progress-data {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 24px;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.song-duration{
+    height: 20px;
+    width: 40px;
+    font-size: 14px;
+    padding: 0px 4px;
+}
+
+/* .progress-bar {
+    height: 24px;
     width: 100%;
     color: black;
-    margin-top: 5px;
+    margin: 0px 4px;
+    flex-grow: 1;
+} */
+
+#progressBar { 
+    width:80%;
+    margin-left:2%;
+    margin-bottom:20px;
+    margin-top:9px;
+    height:10px;
+    background:url(/images/progress_bg.png) no-repeat;
+    float:left;
+ }
+ 
+.progress-container {
+    width: 100%;
+    height: 8px;
 }
+
+ #progress {
+    background:url(/images/progress.png) no-repeat;
+    height:10px;
+    transform: translateY(-5px);
+    display:inline-block;
+ }
+
+ .progress2 {
+    height: 32px;
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.25);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25),
+      0 1px rgba(255, 255, 255, 0.08);
+      /* width: 180px; */
+      /* border: 1px solid white; */
+      padding: 3px;
+  }
+  
+  .progress-bar2 {
+    height: 100%;
+    border-radius: 30px;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0.05)
+    );
+    transition: 0.4s linear;
+    transition-property: width, background-color;
+  }
+  
+  .progress-moved .progress-bar2 {
+    width: 100%;
+    background-color: #1ed760;
+    animation: progressAnimation 6s;
+  }
+
+  
+  /* @keyframes progressAnimation {
+    0% {
+      width: 0%;
+      background-color: #1ed760;
+    }
+    100% {
+      width: 85%;
+      background-color: #1ed760;
+    }
+  } */
 
 .side-controls {
     display: flex;
@@ -462,13 +593,24 @@ a {
     background-color: transparent;
 }
 
-.volume-bar {
+.side-control-elements:hover button {
+    transform: scale(1.1);
+}
+
+#volume-bar {
     width: 100px;
 }
 
+#playlist {
+    /* display: none; */
+}
 
 
 /* Liked Main */
+.liked-main {
+    gap:5px
+}
+
 .liked-songs-header {
     display: flex;
     height: 250px;
@@ -534,13 +676,26 @@ a {
     background-color: rgb(39, 39, 39);
 }
 
+.songs-list:hover .title-number {
+    display: none;
+}
 
+#title-play {
+    display: none;
+    font-size: 14px;
+    color: #a3a3a3;
+    transform: translateX(3px);
+}
 
+.songs-list:hover #title-play {
+    display: block;
+}
 
 /* Scrollbar */
 
 ::-webkit-scrollbar{
-    width: 10px;
+    width: 5px;
+    display: none;
     background-color: transparent;
 }
 
