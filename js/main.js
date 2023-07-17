@@ -26,9 +26,6 @@ function initAudio(element){
 	$('#song-name a').text(title);
     $('#song-artist a').text(artist);
 
-    // URL for song and artist
-    element.setAttribute(name,value)
-	
 	//Insert Cover Image
 	$('img.cover').attr('src','images/covers/' + cover);
 	
