@@ -227,6 +227,9 @@ a {
     padding-right: 30px;
     padding-left: 15px;
     gap: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 2;
 }
 
 .arrow-buttons-container {
