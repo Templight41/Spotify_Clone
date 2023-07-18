@@ -16,7 +16,7 @@ function initAudio(element){
     var artisturl = element.attr('artisturl');
 
 	//Create a New Audio Object
-	audio = new Audio('media/' + song);
+	audio = new Audio('/media/' + song);
 	
 	if(!audio.currentTime){
 		$('#duration').html('0:00');
@@ -27,11 +27,15 @@ function initAudio(element){
 	}
 
     //Update song name
-	document.getElementById('song-name-url').href = "https://www.youtube.com/watch?v=MdY8F_xMpQU"
-    
+    $('#song-name-url').text(songname);
+    $('#song-artist-url').text(artist);
+
+    //Update song/artist URL
+	document.getElementById('song-name-url').href = songurl;
+    document.getElementById('song-artist-url').href = artisturl;
 
 	//Insert Cover Image
-	$('img.cover').attr('src','images/covers/' + cover);
+	document.getElementById('cover').src = cover;
 	
 	$('#playlist li').removeClass('active');
     element.addClass('active');
@@ -39,7 +43,7 @@ function initAudio(element){
 
 
 //Playlist Song Click
-$('.songs-list').click(function () {
+$('#playlist li').click(function () {
     audio.pause();
     initAudio($(this));
 	$('#play').hide();
@@ -98,20 +102,23 @@ $('#prev').click(function(){
 	showDuration();
 });
 
-// //Playlist Song Click
-// $('#playlist li').click(function () {
-//     audio.pause();
-//     initAudio($(this));
-// 	$('#play').hide();
-// 	$('#pause').show();
-// 	$('#duration').fadeIn(400);
-// 	audio.play();
-// 	showDuration();
-// });
-
 //Volume Control
 $('#volume-bar').change(function(){
 	audio.volume = parseFloat(this.value / 10);
+
+    //Setting volume button according to volume-bar
+    var vol = parseInt(this.value);
+    if (vol <= 4) {
+        $('#volume-up').hide()
+        $('#volume-down').show()
+        $('#volume-mute').hide()
+
+    }   else {
+        $('#volume-up').show()
+        $('#volume-down').hide()
+        $('#volume-mute').hide()
+    }
+    
 });
 	
 //Time Duration
