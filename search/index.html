@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="icon" href="/assets/logo.png">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,100,0,200" />
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" /> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="contain">
+        <div class="sidebar">
+
+            <!--Home/Search bar-->
+            <ul class="top-bar">
+                <li class="top-bar-elements" id="Home"><a href="/" style="width: 100%; height: 40px; display: flex; align-items: center; gap: 20px; font-weight: 500; font-size: 1rem; color: #9c9c9c;"><span class="material-symbols-outlined" style="height: 24px; font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 48">home</span><div>Home</div></a></li>
+                <li class="top-bar-elements" id="Search"><a href="#" style="width: 100%; height: 40px; display: flex; align-items: center; gap: 20px; font-weight: 500; font-size: 1rem; color: #9c9c9c;"><span class="material-symbols-outlined" style="height: 24px;">search</span><div style="width: 100%;">Search</div></a></li>
+            </ul>
+
+
+            <div class="library">
+
+                <!--Library Name/logo-->
+                <div class="lib-top" style="padding: 8px 16px;">
+                    <div>
+                        <button id="library-button" style="background-color: transparent; border: 1px solid #121212; font-size: 1rem; gap: 15px; align-items: center; font-weight: 600; height: 40px; flex-grow: 1; display: flex;">
+                            <img src="/assets/library_icon.png" alt="library" style="height: 18px; width: 18px; margin-top: -6px;">
+                            <p style="margin: 0; color:#9c9c9c;">Your Library</p>
+                        </button>
+                    </div>
+                    <span class="material-symbols-outlined" style="height: 24px; width: 24px; color: rgb(176, 176, 176);">add</span>
+                </div>
+
+                <!--Song type-->
+                <div class="song-type">
+                    <div class="song-type-elements"><span>Playlist</span></div>
+                    <div class="song-type-elements"><span>Artist</span></div>
+                    <div class="song-type-elements"><span>Albums</span></div>
+                    <div class="song-type-elements"><span>Podcasts & Shows</span></div>
+                </div>
+
+                <!--Album/Playlists-->
+                <div class="library-content">
+                    <div class="search-recents">
+                        <button class="album-search"><span class="material-symbols-outlined" style="font-size: 18px;">search</span></button>
+                        <button class="recents">Recents</button>
+                    </div>
+                    <ul class="albums">
+                        <li>
+                            <a href="/liked_songs" style="color: #1ed760; background-color: #232323">
+                                <img src="https://i1.sndcdn.com/artworks-y6qitUuZoS6y8LQo-5s2pPA-t500x500.jpg" alt="liked songs" style="height: 48px; filter: brightness(1.4);">
+                                <div class="album-content">    
+                                    <p>Liked Songs</p>
+                                    <p style="font-size: 12px; color: rgb(176, 176, 176); "><i class="fa-solid fa-thumbtack" style="color: #1ed760; transform: rotate(45deg);"></i> &nbsp; Playlist  •  4 songs</p>
+                                </div>
+                            </a>
+                        </li>
+                        <!-- <li>
+                            <a href="#" style="color: #1ed760;">
+                                <img src="https://i1.sndcdn.com/artworks-y6qitUuZoS6y8LQo-5s2pPA-t500x500.jpg" alt="liked songs" style="height: 48px; filter: brightness(1.4);">
+                                <div class="album-content">    
+                                    <p>Liked Songs</p>
+                                    <p style="font-size: 12px; color: rgb(176, 176, 176); "><i class="fa-solid fa-thumbtack" style="color: #1ed760; transform: rotate(45deg);"></i> &nbsp; Playlist  •  1 song</p>
+                                </div>
+                            </a>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="resizer"></div>
+
+        <div class="main">
+            <div class="main-container liked-main">
+                    <!--Header-->
+                <div class="main-header">
+                    <div class="arrow-buttons-container">
+                        <button class="arrow-buttons" id="left-arrow"><img src="/assets/backward_icon.png" alt="back arrow" style="height: 21px; width: 21px; margin-left: -3px; margin-top: 3px;"></button>
+                        <button class="arrow-buttons" id="right-arrow"><img src="/assets/forward_icon.png" id="right-arrow" alt="forwards arrow" style="height: 20px; width: 20px; margin-left: 2px; margin-top: 3px;"></button>
+                    </div>
+                    <form action="">
+                        <div class="input-placeholder">
+                            <label for="search_input"><span class="material-symbols-outlined" style="height: 24px;">search</span></label>
+                            <input type="text" id="search_input" placeholder="What do you want to listen to?" required>
+                        </div>
+                    </form>
+                    <div style="width: 75%;"></div>
+                    <a href="https://github.com/Templight41" target="_blank" id="github"><i class="fa-brands fa-github" style="height: 20px; font-size: 20px; display: inline-block;"></i><span>Github - Ari</span></a>
+                    <a href="https://open.spotify.com/user/31e2pjluo3vczqxgn244j2ibhvtq" target="_blank" id="profile"><img src="https://i.scdn.co/image/ab67757000003b8286fe3f324cff21a74a2019ee" alt="profile picture"></a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+    <div class="music-player">
+        <div class="song-info-container">
+            <div class="artwork"><img id="cover" src="https://song.link/_next/image?url=https%3A%2F%2Fis2-ssl.mzstatic.com%2Fimage%2Fthumb%2FMusic125%2Fv4%2F7e%2Fdc%2F12%2F7edc1207-0529-68da-2813-06b247c68120%2Fcover.jpg%2F512x512bb.jpg&w=1920&q=75" alt="artwork"></div>
+            <div class="song-info-links">
+                <span id="song-name" class="song-name"><a id="song-name-url" href="https://open.spotify.com/album/13ATYLc7i4HuNbQrAEawOH" target="_blank">Yellow Paper Daisy</a></span>
+                <span id="song-artist" class="song-artist"><a id="song-artist-url" href="https://open.spotify.com/artist/04hYGGSjYtLekuuJXEGrIl" target="_blank">When Chai Met Toast</a></span>
+            </div>
+            <div class="heart"><button type="button" style="background-color: transparent; border: 1px solid black;"><span class="material-symbols-outlined" style="color: white;">favorite</span></button></div>
+        </div>
+        <div class="player">
+            <div class="controls">
+                <button id="shuffle"><i class="fa fa-solid fa-shuffle" style="font-size: 18px;"></i></button>
+                <button id="prev"><i class="fa-solid fa-backward-step" style="font-size: 18px; transform: scale(1.1,1);"></i></button>
+                <button id="play"><i class="fa-solid fa-play" style="color: #000000; padding-left: 1px; padding-top: 2px;"></i></button>
+                <button id="pause"><i class="fa-solid fa-pause" style="color: #000000; margin-left: -1px; padding-top: 3px;"></i></button>
+                <button id="next"><i class="fas fa-step-forward" style="font-size: 18px; transform: scale(1.1,1);"></i></button>
+                <button id="repeat" style="margin-top: 1px;"><i class="fa-solid fa-repeat" style="font-size: 16px;"></i></button>
+            </div>
+            <div class="progress-data">
+                <div id="duration" class="song-duration"></div>
+                <div class="progress-container">
+                    <div class="progress2 progress-moved" id="progress2" style="height: 2px;">
+                      <div class="progress-bar2" id="progress-bar2">
+                      </div>
+                    </div>
+                  </div>
+                <div id="time-left" class="song-duration"></div>
+            </div>
+        </div>
+        <div class="side-controls">
+            <span id="now-playing" class="side-control-elements"><button style="height: 100%; width: 100%; background-color: transparent; padding: 0; border: 1px solid black;"><span class="material-symbols-outlined" style="color: white; font-size: 18px; transform: scale(1,1.08);">slideshow</span></button></span>
+            <span id="lyrics" class="side-control-elements"><button style="height: 100%; width: 100%; background-color: transparent; padding: 0; border: 1px solid black;"><span class="material-symbols-outlined" style="color: white; font-size: 18px;">mic_external_on</span></button></span>
+            <span id="queue" class="side-control-elements"><button style="height: 100%; width: 100%; background-color: transparent; padding: 0; border: 1px solid black;"><span class="material-symbols-outlined" style="color: white; font-size: 18px;">queue_music</span></button></span>
+            <span id="devices" class="side-control-elements"><button style="height: 100%; width: 100%; background-color: transparent; padding: 0; border: 1px solid black;"><span class="material-symbols-outlined" style="color: white; font-size: 18px;">devices</span></button></span>
+            <span id="volume" class="side-control-elements"><button style="height: 100%; width: 100%; background-color: transparent; padding: 0; border: 1px solid black;">
+                <span class="material-symbols-outlined" id="volume-up" style="color: white; font-size: 18px;">volume_up</span>
+                <span class="material-symbols-outlined" id="volume-down" style="color: white; font-size: 18px; display: none;">volume_down</span>
+                <span class="material-symbols-outlined" id="volume-mute" style="color: white; font-size: 18px; display: none;">volume_mute</span>
+            </button></span>
+            <input id="volume-bar" type="range" min="0" max="10" value="5">
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/js/main.js"></script>
+    <script src="/search/app.js"></script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-var audio;
+let audio;
 
 //Hide Pause Initially
 $('#pause').hide();
@@ -7,13 +7,13 @@ $('#pause').hide();
 initAudio($('#playlist li:first-child'));
 	
 function initAudio(element){
-	var song = element.attr('song');
-    var title = element.text();
-    var cover = element.attr('cover');
-    var artist = element.attr('artist');
-    var songname = element.attr('songname');
-    var songurl = element.attr('songurl');
-    var artisturl = element.attr('artisturl');
+	let song = element.attr('song');
+    let title = element.text();
+    let cover = element.attr('cover');
+    let artist = element.attr('artist');
+    let songname = element.attr('songname');
+    let songurl = element.attr('songurl');
+    let artisturl = element.attr('artisturl');
 
 	//Create a New Audio Object
 	audio = new Audio('/media/' + song);
@@ -81,7 +81,7 @@ $('#stop').click(function(){
 //Next Button
 $('#next').click(function(){
     audio.pause();
-    var next = $('#playlist li.active').next();
+    let next = $('#playlist li.active').next();
     if (next.length == 0) {
         next = $('#playlist li:first-child');
     }
@@ -93,7 +93,7 @@ $('#next').click(function(){
 //Prev Button
 $('#prev').click(function(){
     audio.pause();
-    var prev = $('#playlist li.active').prev();
+    let prev = $('#playlist li.active').prev();
     if (prev.length == 0) {
         prev = $('#playlist li:last-child');
     }
@@ -107,7 +107,7 @@ $('#volume-bar').change(function(){
 	audio.volume = parseFloat(this.value / 10);
 
     //Setting volume button according to volume-bar
-    var vol = parseInt(this.value);
+    let vol = parseInt(this.value);
     if (vol <= 4) {
         $('#volume-up').hide()
         $('#volume-down').show()
@@ -125,10 +125,10 @@ $('#volume-bar').change(function(){
 function showDuration(){
 	$(audio).bind('timeupdate', function(){
 		//Get hours and minutes
-		var s = parseInt(audio.currentTime % 60);
-		var m = parseInt((audio.currentTime / 60) % 60);
-        var ss = parseInt((audio.duration - audio.currentTime) % 60)
-        var mm = parseInt(((audio.duration - audio.currentTime)/60) % 60);
+		let s = parseInt(audio.currentTime % 60);
+		let m = parseInt((audio.currentTime / 60) % 60);
+        let ss = parseInt((audio.duration - audio.currentTime) % 60)
+        let mm = parseInt(((audio.duration - audio.currentTime)/60) % 60);
 		//Add 0 if seconds less than 10
 		if (s < 10) {
 			s = '0' + s;
@@ -138,7 +138,7 @@ function showDuration(){
 		}
 		$('#duration').html(m + ':' + s);	
         $('#time-left').html(mm + ':' + ss)
-		var value = 0;
+		let value = 0;
 		if (audio.currentTime > 0) {
 			value = Math.floor((100 / audio.duration) * audio.currentTime);
 		}
